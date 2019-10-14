@@ -1,0 +1,47 @@
+.header{
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    @include spase-bt();
+    &_left{
+    width: 25%;
+    }
+    &_mid{
+    margin-top: 4px; 
+    margin-bottom: 7px;
+
+    @include h-w(50px, 50%);
+
+    @include spase-bt();
+
+    &_left{
+        width: 50%;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center; 
+        &_one{
+        width: 50px;
+        }
+        &_two{
+        width: 50px;
+        }
+    }
+
+    &_rite{
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;          
+        &_one{
+            width: 50px;
+        }
+        &_two{
+            width: 50px;
+        }
+            &_free{
+                width: 50px;
+            }
+        }
+    }
+    &_rite{
+        width: 25%;
+    }
+}

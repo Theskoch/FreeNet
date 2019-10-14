@@ -1,0 +1,55 @@
+.post{
+    $radius : 25px;
+    @include h-w(350px, 100%);
+    
+    border: 2px rgb(221, 221, 221) solid;
+    border-radius: $radius; 
+    background: url(img/ddd.jpg);
+    display: flex;
+    flex-direction: column;
+    &_title{
+        @include h-w(40px, 100%);
+        @include spase-fl_end();
+        &_spase{
+            @include h-w(40px, 30px);
+            @include spase-fl_end();
+        }
+        &_title{
+            @include h-w(40px, 100%);
+            @include spase-fl_end();
+        }
+    }
+    &_text{
+        @include h-w(100%, 100%);
+    }
+    &_bot{
+        $h:40px;
+        $w:50px;
+        @include h-w($h, 100%);
+        @include spase-bt();
+        &_icon{
+            display: flex;
+            justify-content: flex-start;
+            @include h-w($h, 50%);
+        &_like{
+            @include h-w($h, $w);
+            @include spase-fl_end();
+        }
+        &_rep{
+            @include h-w($h, $w);
+            @include spase-fl_end();
+        }
+        &_com{
+            @include h-w($h, $w);
+            @include spase-fl_end();
+        }
+        }
+        &_sharp{
+            @include spase-fl_end();
+            @include h-w($h, 50%);
+        }
+        &_spase{
+            @include h-w(40px, 20px);
+        }
+    }
+}

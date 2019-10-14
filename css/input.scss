@@ -1,0 +1,38 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+@mixin spase-bt(){
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin h-w($h,$w){
+  height: $h;
+  width: $w;
+}
+
+@mixin spase-fl_end(){
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+@import '_color.scss';
+
+@import '_header.scss';
+
+@import 'blog-body';
+
+@import 'post-style';
+
+body{
+  background: url(img/ft.svg);
+  background-repeat: repeat-x; 
+}
+
+.class{
+  display: flex;
+  flex-direction: column;
+}
