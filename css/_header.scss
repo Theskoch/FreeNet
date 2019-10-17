@@ -1,10 +1,10 @@
 .header{
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     @include spase-bt();
-    &_left{
+    &__left-sidebar{
     width: 25%;
     }
-    &_mid{
+    &__menu{
     margin-top: 4px; 
     margin-bottom: 7px;
 
@@ -12,36 +12,36 @@
 
     @include spase-bt();
 
-    &_left{
+    &__navigation{
         width: 50%;
         display: flex;
         justify-content: flex-start;
         align-items: center; 
-        &_one{
+        &-timeline{
         width: 50px;
         }
-        &_two{
+        &-channels{
         width: 50px;
         }
     }
 
-    &_rite{
+    &__person{
         width: 50%;
         display: flex;
         justify-content: flex-end;
         align-items: center;          
-        &_one{
+        &-search{
             width: 50px;
         }
-        &_two{
+        &-settings{
             width: 50px;
         }
-            &_free{
-                width: 50px;
-            }
+        &-account{
+            width: 50px;
+        }
         }
     }
-    &_rite{
-        width: 25%;
+    &__right-sidebar{
+    width: 25%;
     }
 }

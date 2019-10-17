@@ -1,0 +1,204 @@
+$font-stack:    Helvetica, sans-serif;
+$primary-color: #333;
+
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+@mixin spase-bt(){
+  display: flex;
+  justify-content: space-between;
+}
+
+@mixin h-w($h,$w){
+  height: $h;
+  width: $w;
+}
+
+@mixin spase-fl_end(){
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+
+body{
+  background: url(img/ft.svg);
+  background-repeat: repeat-x; 
+}
+
+.class{
+  display: flex;
+  flex-direction: column;
+
+  &_top{
+
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
+
+      @include spase-bt();
+
+      &_left{
+        width: 25%;
+      }
+  
+      &_mid{
+        margin-top: 4px; 
+        margin-bottom: 7px;
+
+        @include h-w(50px, 50%);
+
+        @include spase-bt();
+
+        &_left{
+          width: 50%;
+          // background-color: rgb(28, 97, 28);
+          display: flex;
+          justify-content: flex-start;
+          align-items: center; 
+
+          &_one{
+            width: 50px;
+          }
+
+          &_two{
+            width: 50px;
+          }
+        }
+
+        &_rite{
+          width: 50%;
+          // background-color: rgb(28, 97, 28);
+
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;          
+
+          &_one{
+            width: 50px;
+          }
+
+          &_two{
+            width: 50px;
+          }
+
+          &_free{
+            width: 50px;
+          }
+        }
+
+      }
+  
+      &_rite{
+        width: 25%;
+      }
+  }
+
+  &_bot{
+    @include spase-bt();
+
+    &_left{
+
+      height: 500px;
+      width: 25%;
+
+      // background-color: rgb(28, 97, 28);
+    }
+
+    &_mid{
+
+      width: 50%;
+
+      display: flex;
+      flex-direction: column;
+
+      &_line{
+        margin: 20px;
+      }
+
+      // background-color: rgb(28, 97, 28);
+    }
+
+    &_rite{
+
+      width: 25%;
+
+      // background-color: rgb(28, 97, 28);
+    }
+  }
+}
+
+.post{
+  $radius : 25px;
+
+  @include h-w(350px, 100%);
+  border: 2px rgb(221, 221, 221) solid;
+  border-radius: $radius; 
+  background: url(img/ddd.jpg);
+  display: flex;
+  flex-direction: column;
+
+    &_title{
+      @include h-w(40px, 100%);
+      @include spase-fl_end();
+      
+      &_spase{
+        @include h-w(40px, 30px);
+        @include spase-fl_end();
+      }
+
+      &_title{
+        @include h-w(40px, 100%);
+        @include spase-fl_end();
+      }
+
+    }
+
+    &_text{
+      // background: blue;
+      @include h-w(100%, 100%);
+    }
+
+    &_bot{
+
+      $h:40px;
+      $w:50px;
+
+      // background: green;
+      @include h-w($h, 100%);
+
+      @include spase-bt();
+
+      &_icon{
+        display: flex;
+        justify-content: flex-start;
+        @include h-w($h, 50%);
+
+        &_like{
+          @include h-w($h, $w);
+          @include spase-fl_end();
+        }
+
+        &_rep{
+          @include h-w($h, $w);
+          @include spase-fl_end();
+        }
+
+        &_com{
+          @include h-w($h, $w);
+          @include spase-fl_end();
+        }
+      }
+
+      &_sharp{
+        @include spase-fl_end();
+        @include h-w($h, 50%);
+      }
+
+      &_spase{
+        @include h-w(40px, 20px);
+      }
+
+      // border-radius: 0px 0px $radius $radius; 
+    }
+}

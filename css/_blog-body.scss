@@ -1,20 +1,20 @@
 .blog__body{
     @include spase-bt();
-    &_left{
+    &__left-sidebar{
     height: 500px;
     width: 25%;
       // background-color: rgb(28, 97, 28);
     }
-    &_mid{
+    &__timeline{
     width: 50%;
     display: flex;
     flex-direction: column;
-    &_line{
-        margin: 20px;
-    }
+    // &_line{ нах это нужно ?
+    //     margin: 20px;
+    // }
       // background-color: rgb(28, 97, 28);
     }
-    &_rite{
+    &__right-sidebar{
     width: 25%;
       // background-color: rgb(28, 97, 28);
     }
