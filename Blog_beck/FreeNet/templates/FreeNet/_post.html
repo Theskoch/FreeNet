@@ -1,14 +1,18 @@
 
+{% extends 'FreeNet/index.html' %}
+
+{% block content %}
+    {% for post in posts %}
                     <div class="post">
 
-                        <div class="post_title">
+                        <div class="post_title"> {{ post.title }}
 
-                            <div class="post_title_title">10.11.2000</div>
+                            <div class="post_title_title">{{ post.published_date }}</div>
                             <div class="post_title_spase"></div>
 
                         </div>
 
-                        <div class="post_text"></div>
+                        <div class="post_text">{{ post.text|linebreaksbr }}</div>
                         <div class="post_bot">
 
                             <div class="post_bot_icon">
@@ -75,7 +79,10 @@
 
                             </div>
 
-                            <div class="post_bot_sharp">#hello#stepa#sosi</div>
+                            <div class="post_bot_sharp">{{ post.hesh }}</div>
                             <div class="post_bot_spase"></div>
 
                         </div>
+
+    {% endfor %}
+{% endblock %}
