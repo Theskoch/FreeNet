@@ -12,10 +12,10 @@
 <body>
     <div class="class">
         <div class="header">
-            <div class="header_left"></div>
-            <div class="header_mid">
-                <div class="header_mid_left">
-                    <div class="header_mid_left_one">
+            <div class="header__left-sidebar"></div>
+            <div class="header__menu">
+                <div class="header__menu__navigation">
+                    <div class="header__menu__navigation-timeline">
 
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                             width="35.059" height="39.989" viewBox="0 0 128 146">
@@ -34,7 +34,7 @@
                         </svg>
                     </div>
 
-                    <div class="header_mid_left_two">
+                    <div class="header__menu__navigation-channels">
 
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="43"
                             height="39.996" viewBox="0 0 127.938 119">
@@ -57,9 +57,9 @@
 
                 </div>
 
-                <div class="header_mid_rite">
+                <div class="header__menu__person">
 
-                    <div class="header_mid_rite_one">
+                    <div class="header__menu__person-search">
 
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                             width="39.997" height="39.997" viewBox="0 0 143 143">
@@ -79,7 +79,7 @@
 
                     </div>
 
-                    <div class="header_mid_rite_two">
+                    <div class="header__menu__person-settings">
 
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                             width="39.988" height="39.988" viewBox="0 0 141 141">
@@ -100,7 +100,7 @@
 
                     </div>
 
-                    <div class="header_mid_rite_free">
+                    <div class="header__menu__person-account">
 
                         <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                             width="39.988" height="39.988" viewBox="0 0 141 141">
@@ -123,28 +123,23 @@
                 </div>
 
             </div>
-            <div class="header_rite"></div>
+            <div class="header__right-sidebar"></div>
 
         </div>
 
         <div class="blog__body">
 
-            <div class="blog__body_left"></div>
+            <div class="blog__body__left-sidebar"></div>
 
-            <div class="blog__body_mid">
-
-                <div class="blog__body_mid_line"> 
+            <div class="blog__body__timeline">
                     {% block content %}
-                        {% endblock %}
-
-
-                    </div>
+                    {% endblock %}
 
                 </div>
 
             </div>
 
-            <div class="blog__body_rite"></div>
+            <div class="blog__body__right-sidebar"></div>
 
         </div>
 
