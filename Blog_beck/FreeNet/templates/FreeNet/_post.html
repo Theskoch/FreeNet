@@ -3,6 +3,7 @@
 
 {% block content %}
     {% for post in posts %}
+    
                     <div class="post">
 
                         <div class="post_title"> {{ post.title }}
@@ -19,6 +20,8 @@
 
                                 <div class="post_bot_icon_like">
 
+                                        <a href="/post/addlikes/{{ post.id }} ">{{ post.like }}
+
                                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                                         width="29.997" height="24.997" viewBox="0 0 90 75">
                                         <metadata>
@@ -33,7 +36,7 @@
                                         </metadata>
                                         <image id="лайк" width="90" height="75"
                                             xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAZCAMAAAAR624oAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAABd1BMVEWhp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp66hp64AAAA/fh+kAAAAe3RSTlMAXKnJ18OUPjiPxOPSp1dKrRAW0EBm/aJeUnG/3Rgp6b1pml0/uCNN8fL77k4ozTYB5r4n9SEF1dpY9yskRK6barKV2VTA7M/hYsh9mHvcAmcZiPyJMHbT8CLBCjtM+eAq6HXRGoq1CLocjnnqRkvvX3d+FKissA6CRUFXh2V6AAAAAWJLR0R80bYgXwAAAAlwSFlzAAAXEQAAFxEByibzPwAAAAd0SU1FB+MKCBcNDHZxdFEAAAE7SURBVCjPdZJlV0JREEUHDGwUsUFsRWwsTFAEu1FMTOxu95+XR4O88+XOufusdWdmXRFFGm1Wdk6uLlxLXn5BYVFxicSkzyai0jIRgzZqyo0RWgGVVdU1tXVgMtdboKFRX9MUCjQrtAVa28K59g6sndi6wqa7B3pF+voZiL1iHwTLUNQMjzAq4mCsLN6FEcbjZgImZYppScjpSDIuZmQWt6jIyZx40KlhN16ZR6+GF1iUAZbU8DJaWWFVha7ZWJcNcGbGm2yFRt4GXyaqgx3l3MW/95/Wj7EfLgweLPZ06vNjOogGrVgPU+nRMQFzzJycgiaZnsG5IWEvvHCZsFUQvEqOD4f+yHU0f7MIt+m93MH9g1I8PsHz/0keQg28iLxCoDfTHt6C8P4Bn18qW/5WfuirqOrH5fpNufgDvPZRGJFViKEAAAAASUVORK5CYII=" />
-                                    </svg>
+                                    </svg></a>
 
                                 </div>
 
@@ -83,6 +86,7 @@
                             <div class="post_bot_spase"></div>
 
                         </div>
+                    </div>
 
     {% endfor %}
 {% endblock %}
