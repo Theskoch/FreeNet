@@ -1,6 +1,6 @@
 from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
-from .models import Post
+from .models import Post, masege
 
 from django.http import HttpResponseRedirect
 
@@ -16,3 +16,8 @@ def addlike(request, post_id):
     post_like.like += coof_like # Прибавляет единицу 
     post_like.save() # сохраняет
     return HttpResponseRedirect('/') # делает редирект на ту же страницу
+
+def post_datail(request, post_id):
+    post = Post.objects.filter(id__contains = post_id)
+    maseges = masege.objects.filter(post_fazer__contains = post_id)
+    return render(request, 'FreeNet/post_datail.html', {'post': post, 'maseges': maseges})

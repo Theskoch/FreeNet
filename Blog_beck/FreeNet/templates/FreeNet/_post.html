@@ -6,7 +6,7 @@
     
                     <div class="post">
 
-                        <div class="post_title"> {{ post.title }}
+                        <div class="post_title"> <a href = "{% url 'post_datail' post_id=post.id %}">{{ post.title }}</a>
 
                             <div class="post_title_title">{{ post.published_date }}</div>
                             <div class="post_title_spase"></div>
