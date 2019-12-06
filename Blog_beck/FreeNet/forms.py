@@ -5,4 +5,4 @@ class masegeForm(forms.ModelForm):
 
     class Meta:
         model = masege
-        fields = ('text',)
+        fields = ( 'text',)

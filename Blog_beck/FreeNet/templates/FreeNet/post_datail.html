@@ -43,10 +43,15 @@
 {% endfor %}
 </div>
 
-<!-- <form method="POST" class="masege-form">{% csrf_token %}
+{% if user.is_authenticated %}
+
+<form method="POST" class="masege-form">
+    {% csrf_token %}
     {{ form.as_p }}
     <button type="submit" class="save bth btn-defolt">Save</button>
-</form> -->
+</form>
+
+{% endif %}
 
 </div>
 {% endblock %}

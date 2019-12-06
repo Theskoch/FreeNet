@@ -19,28 +19,25 @@ def addlike(request, post_id):
     return HttpResponseRedirect('/') # делает редирект на ту же страницу
 
 def post_datail(request, post_id):
-    
-    post = Post.objects.filter(id__contains = post_id)
-    maseges = masege.objects.filter(post_fazer__contains = post_id)
-    return render(request, 'FreeNet/post_datail.html', {'post': post, 'maseges': maseges})
-
-    # if request.method == "POST":
-    #     form = masegeForm(request.POST)
-    #     if form.is_valid():
-    #         masege_s=form.save(commit=False)
-    #         masege_s.author = request.user
-    #         masege_s.hesh = "#" + post_id
-    #         masege_s.post_fazer = post_id
-    #         masege_s.fazer = post_id
-    #         masege_s.save()
-    #         form = masegeForm()
-    #         maseges = masege.objects.filter(post_fazer__contains = post_id)
-    #         return render(request, 'FreeNet/post_datail.html', {'post': post, 'maseges': maseges})
-            
-    #     else:
-    #         post = Post.objects.filter(id__contains = post_id)
-    #         maseges = masege.objects.filter(post_fazer__contains = post_id)
-    #     return render(request, 'FreeNet/post_datail.html', {'post': post, 'maseges': maseges})
+    auth = request.user
+    if request.method == "POST":
+        form = masegeForm(request.POST)
+        if form.is_valid():
+            masege_s = form.save(commit=False)
+            masege_s.hesh = "#" + str(post_id)
+            masege_s.post_fazer = post_id
+            masege_s.fazer = post_id
+            masege_s.author = auth
+            masege_s.save()
+            form = masegeForm()
+            post = Post.objects.filter(id__contains = post_id)
+            maseges = masege.objects.filter(post_fazer__contains = post_id)
+            return render(request, 'FreeNet/post_datail.html', {'post': post, 'maseges': maseges, 'form': form})
+    else:
+        form = masegeForm()
+        post = Post.objects.filter(id__contains = post_id)
+        maseges = masege.objects.filter(post_fazer__contains = post_id)
+    return render(request, 'FreeNet/post_datail.html', {'post': post, 'maseges': maseges, 'form': form})
 
 def user_info(request):
     return render(request,'FreeNet/user_info.html')
