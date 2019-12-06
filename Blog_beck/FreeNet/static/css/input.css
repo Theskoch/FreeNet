@@ -116,7 +116,7 @@
 }
 
 .post {
-  margin: 20px 0 0 0;
+  margin: 8% 0 0 0;
   height: 350px;
   width: 100%;
   border: 2px #dddddd solid;
@@ -135,25 +135,28 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   height: 40px;
   width: 100%;
 }
 
 .post_title__link {
   text-decoration: none;
+  height: 40px;
+  margin: 10px 0 0px 20px;
 }
 
 .post_title__date {
   height: 40px;
-  width: 100%;
+  margin: 10px 20px 0 0;
 }
 
 .post_text {
   height: 100%;
-  width: 100%;
+  width: 78%;
+  border: 1px solid #dddddd;
 }
 
 .post_bot {
