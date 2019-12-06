@@ -1,0 +1,20 @@
+{% extends "FreeNet/index.html" %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+<h1>hello ueban
+{{user.username}}</h1>
+<!-- {{user.password}} -->
+<h1>mail: {{user.email}}</h1>
+<h1>group:{{user.groups}}</h1>
+
+<a href="{% url 'logout' %}">siebat</a>
+
+{% else %}
+
+<a href="{% url 'login' %}">login</a> 
+
+{% endif %}
+
+{% endblock %}

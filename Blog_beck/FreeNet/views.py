@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.utils import timezone
 from .models import Post, masege
+from .forms import masegeForm
 
 from django.http import HttpResponseRedirect
 
@@ -18,6 +19,31 @@ def addlike(request, post_id):
     return HttpResponseRedirect('/') # делает редирект на ту же страницу
 
 def post_datail(request, post_id):
+    
     post = Post.objects.filter(id__contains = post_id)
     maseges = masege.objects.filter(post_fazer__contains = post_id)
     return render(request, 'FreeNet/post_datail.html', {'post': post, 'maseges': maseges})
+
+    # if request.method == "POST":
+    #     form = masegeForm(request.POST)
+    #     if form.is_valid():
+    #         masege_s=form.save(commit=False)
+    #         masege_s.author = request.user
+    #         masege_s.hesh = "#" + post_id
+    #         masege_s.post_fazer = post_id
+    #         masege_s.fazer = post_id
+    #         masege_s.save()
+    #         form = masegeForm()
+    #         maseges = masege.objects.filter(post_fazer__contains = post_id)
+    #         return render(request, 'FreeNet/post_datail.html', {'post': post, 'maseges': maseges})
+            
+    #     else:
+    #         post = Post.objects.filter(id__contains = post_id)
+    #         maseges = masege.objects.filter(post_fazer__contains = post_id)
+    #     return render(request, 'FreeNet/post_datail.html', {'post': post, 'maseges': maseges})
+
+def user_info(request):
+    return render(request,'FreeNet/user_info.html')
+
+def user_logout(request):
+    return render(request, 'registration/logged_out.html')

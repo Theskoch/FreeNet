@@ -32,4 +32,4 @@ class masege(models.Model):
         self.save()
 
     def __str__(self):
-        return self.hash
+        return self.text

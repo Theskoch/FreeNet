@@ -22,9 +22,9 @@
 
 {% block content %}
 <div class="main">
-    <div>
-{% for posts in post %}
 
+{% for posts in post %}
+<h1></h1>
     {{ posts.author }}
     {{ posts.hesh }}
     {{ posts.title }}
@@ -38,9 +38,15 @@
 {% for maseg in maseges %}
 
     <div class="masege">
-
+      <h1>  {{ maseg.text }}  {{maseg.author}} {{maseg.date}}</h1>
     </div>
 {% endfor %}
 </div>
 
+<!-- <form method="POST" class="masege-form">{% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="save bth btn-defolt">Save</button>
+</form> -->
+
+</div>
 {% endblock %}
