@@ -9,15 +9,14 @@
     display: flex;
     flex-direction: column;
     &_title{
+        display: flex;
+        justify-content: center;
         @include h-w(40px, 100%);
-        @include spase-fl_end();
-        &_spase{
-            @include h-w(40px, 30px);
-            @include spase-fl_end();
+        &__link{
+            text-decoration: none;
         }
-        &_title{
+        &__date{
             @include h-w(40px, 100%);
-            @include spase-fl_end();
         }
     }
     &_text{

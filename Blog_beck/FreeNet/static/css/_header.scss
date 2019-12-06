@@ -1,6 +1,10 @@
 .header{
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     @include spase-bt();
+    position: fixed;
+    background: white;
+    z-index: 2;
+    width: 100%;
     &__left-sidebar{
     width: 25%;
     }

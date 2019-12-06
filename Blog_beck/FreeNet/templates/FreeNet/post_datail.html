@@ -1,24 +1,6 @@
 {% extends 'FreeNet/index.html' %}
 
 <html>
-    <style>
-    
-    .main
-    {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-    }
-
-.masege
-{
-    padding: 5px;
-    margin: 10px;
-    border: solid 1px black;
-}
-
-    </style>
 
 {% block content %}
 <div class="main">
@@ -38,7 +20,7 @@
 {% for maseg in maseges %}
 
     <div class="masege">
-      <h1>  {{ maseg.text }}  {{maseg.author}} {{maseg.date}}</h1>
+        <h1>  {{ maseg.text }}  {{maseg.author}} {{maseg.date}}</h1>
     </div>
 {% endfor %}
 </div>

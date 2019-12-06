@@ -1,5 +1,6 @@
 .blog__body{
     @include spase-bt();
+    z-index: 1;
     &__left-sidebar{
     height: 500px;
     width: 25%;
